@@ -1,0 +1,57 @@
+/* 🔥 GARANTE CENTRALIZAÇÃO IGUAL AO INDEX */
+.wrapper {
+  margin: 0 auto;
+}
+
+/* FORM */
+.form-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* INPUT PADRÃO BOTÃO */
+.form-input {
+  width: 100%;
+  padding: 15px 22px;
+  border-radius: 14px;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* PLACEHOLDER */
+.form-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* FOCO */
+.form-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212,168,58,0.4);
+}
+
+/* TITULOS */
+.form-title {
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+}
+
+/* ANIMAÇÃO IGUAL BOTÕES */
+.form-input {
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}

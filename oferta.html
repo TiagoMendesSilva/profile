@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Ofertas Exclusivas</title>
+
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 🔥 IMPORTANTE: primeiro o global -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- depois o específico -->
+  <link rel="stylesheet" href="./oferta.css" />
+</head>
+
+<body>
+
+<!-- BACKGROUND (igual index) -->
+<div class="bg">
+  <div class="bg-city"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-particles" id="particles"></div>
+</div>
+
+<div class="wrapper">
+  <!-- TÍTULO -->
+  <h1 class="profile-name">Ofertas Exclusivas</h1>
+  <p class="profile-sub">Receba imóveis antes de todo mundo</p>
+
+  <div class="divider"></div>
+
+  <!-- FORM -->
+  <div class="links">
+
+    <div class="form-title">Cadastre-se agora</div>
+    <div class="form-sub">Receba oportunidades filtradas para você</div>
+
+    <form id="leadForm" class="form-card">
+
+      <input class="form-input" type="text" id="nome" placeholder="Seu nome" required />
+
+      <input class="form-input" type="text" id="whatsapp" placeholder="WhatsApp" required />
+
+      <select class="form-input" id="tipoImovel">
+        <option value="">Tipo de imóvel</option>
+        <option>Apartamento</option>
+        <option>Casa</option>
+        <option>Investimento</option>
+      </select>
+
+      <select class="form-input" id="faixaPreco">
+        <option value="">Faixa de preço</option>
+        <option>Até 300 mil</option>
+        <option>300 a 500 mil</option>
+        <option>500 mil+</option>
+      </select>
+
+      <button class="btn btn-gold" type="submit">
+        📋 Receber Ofertas Exclusivas
+      </button>
+
+    </form>
+
+    <!-- VOLTAR -->
+    <a href="index.html" class="btn">
+      ← Voltar
+    </a>
+
+  </div>
+
+</div>
+
+<script src="./oferta.js"></script>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
-document.getElementById("leadForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
+const form = document.getElementById("leadForm");
 
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
   const button = e.target.querySelector("button");
 
   // loading visual
@@ -14,8 +15,10 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
     faixaPreco: document.getElementById("faixaPreco").value
   };
 
+  const dataSave = {...data};
+
   try {
-    await fetch("http://localhost:8080/leads", {
+    const response = await fetch("http://localhost:8080/lead", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -23,13 +26,24 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
       body: JSON.stringify(data)
     });
 
+    if(!response.ok) {
+      throw new Error(`Erro ao cadastrar: ${response.status}`)
+    }
+
     const msg = encodeURIComponent("Olá, acabei de me cadastrar e quero receber imóveis exclusivos");
 
-    window.location.href = `https://wa.me/5511940671399?text=${msg}`;
-
+    window.open(`https://wa.me/5511940671399?text=${msg}`, "_blank");
+    form.reset();    
   } catch (error) {
     alert("Erro ao enviar. Tente novamente.");
 
+    /*Restaura os dados no formulário*/
+    document.getElementById("name").value = dataSave.nome;
+    document.getElementById("whatsapp").value = dataSave.whatsapp;
+    document.getElementById("tipoImovel").value = dataSave.tipoImovel;
+    document.getElementById("faixaPreco").value = dataSave.faixaPreco;
+  } finally {
+    /*Sempre restaura o botão */
     button.innerText = "📋 Receber Ofertas Exclusivas";
     button.disabled = false;
   }

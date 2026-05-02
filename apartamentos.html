@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imóveis Disponíveis</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./apartamentos.css">
+</head>
+<body>
+
+<div class="bg">
+  <div class="bg-city"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<div class="wrapper">
+  <div class="avatar-ring">
+    <div class="avatar-placeholder">🏢</div>
+  </div>
+
+  <h1 class="profile-name">Imóveis disponíveis</h1>
+  <p class="profile-sub">Imóveis selecionados para seu perfil</p>
+
+  <div class="divider"></div>
+
+  <div id="propertyList" class="property-list"></div>
+
+  <div class="pagination">
+    <button id="prevBtn" class="btn">← Anterior</button>
+    <button id="nextBtn" class="btn">Próximo →</button>
+  </div>
+
+  <a href="index.html" class="btn back-button">← Voltar</a>
+</div>
+
+<script src="./apartamentos.js"></script>
+</body>
+</html>

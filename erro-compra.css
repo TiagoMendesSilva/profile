@@ -1,0 +1,90 @@
+.profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 7vw, 36px);
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.profile-sub {
+  text-align: center;
+  color: var(--gold2);
+  font-size: 22px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.tips-container {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0 auto;
+}
+
+.tip-card {
+  width: 100%;
+  background: rgba(15, 48, 120, 0.72);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 28px;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-4px);
+  background: rgba(15, 48, 120, 0.82);
+}
+
+.tip-card h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: var(--gold2);
+}
+
+.tip-card p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+}
+
+.back-button {
+  width: 100%;
+  max-width: 760px;
+  margin: 28px auto 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 28px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .profile-name {
+    white-space: normal;
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  .profile-sub {
+    font-size: 18px;
+  }
+
+  .tip-card {
+    padding: 22px;
+  }
+
+  .tip-card h3 {
+    font-size: 22px;
+  }
+
+  .tip-card p {
+    font-size: 16px;
+  }
+}

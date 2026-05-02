@@ -1,0 +1,87 @@
+.tips-grid {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.tip-card {
+  width: 100%;
+  background: rgba(17, 56, 125, 0.68);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 30px;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.22);
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  background: rgba(17, 56, 125, 0.78);
+}
+
+.tip-card h3 {
+  color: #f3c13a;
+  font-size: 26px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.tip-card p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.90);
+}
+
+.contact-btn,
+.back-button {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.back-button {
+  margin-top: 16px;
+}
+
+.profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 7vw, 36px);
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .tips-grid,
+  .contact-btn,
+  .back-button {
+    max-width: 100%;
+  }
+
+  .tip-card {
+    padding: 22px;
+  }
+
+  .tip-card h3 {
+    font-size: 22px;
+  }
+
+  .tip-card p {
+    font-size: 16px;
+  }
+
+  .profile-name {
+    white-space: normal;
+    font-size: 38px;
+    line-height: 1.1;
+  }
+}

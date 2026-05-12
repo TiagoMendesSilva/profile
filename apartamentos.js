@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/home";
+const API_URL = "http://52.91.30.127:8080/home";
 
 let currentPage = 0;
 const pageSize = 1;

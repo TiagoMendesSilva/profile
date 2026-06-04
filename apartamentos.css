@@ -56,7 +56,7 @@
 
 .property-actions .btn {
   flex: 1;
-  text-align: center;
+  text-align: center; 
 }
 
 .pagination {
@@ -85,3 +85,4 @@ button:disabled {
   cursor: not-allowed;
   pointer-events: none;
 }
+

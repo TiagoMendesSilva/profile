@@ -12,6 +12,7 @@ form.addEventListener("submit", async function(e) {
     nome: document.getElementById("nome").value,
     whatsapp: document.getElementById("whatsapp").value,
     tipoImovel: document.getElementById("tipoImovel").value,
+    tipologia: document.getElementById("tipologia").value,
     faixaPreco: document.getElementById("faixaPreco").value
   };
 
@@ -38,9 +39,10 @@ form.addEventListener("submit", async function(e) {
     alert("Erro ao enviar. Tente novamente.");
 
     /*Restaura os dados no formulário*/
-    document.getElementById("name").value = dataSave.nome;
+    document.getElementById("nome").value = dataSave.nome;
     document.getElementById("whatsapp").value = dataSave.whatsapp;
     document.getElementById("tipoImovel").value = dataSave.tipoImovel;
+    document.getElementById("tipologia").value = dataSave.tipologia;
     document.getElementById("faixaPreco").value = dataSave.faixaPreco;
   } finally {
     /*Sempre restaura o botão */

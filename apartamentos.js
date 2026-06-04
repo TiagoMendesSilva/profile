@@ -1,4 +1,4 @@
-const API_URL = "/home";
+const API_URL = "https://api.tiagomendessilva.com.br/home"
 
 let currentPage = 0;
 const pageSize = 1;
@@ -27,18 +27,14 @@ async function carregarImoveis(page = 0) {
       card.className = "property-card";
 
       card.innerHTML = `
-        <img src="${converterDriveLink(imovel.imgUrl)}" alt="${imovel.titulo}">
+        <img src="${imovel.imgUrl}" alt="${imovel.titulo}">
         
         <div class="property-content">
           <h3>${imovel.titulo}</h3>
           <p>${imovel.bairro}</p>
           <strong>à partir R$ ${formatarPreco(imovel.preco)}</strong>
 
-          <div class="property-actions">
-            <a href="${converterDrivePreview(imovel.pdfBookUrl)}" target="_blank" class="btn">
-              📘 Ver Book
-            </a>
-
+          <div class="property-actions">                                  
             <a href="https://wa.me/5511940671399?text=${encodeURIComponent(
               `Tenho interesse no imóvel ${imovel.titulo}`
             )}" target="_blank" class="btn btn-gold">
@@ -68,31 +64,6 @@ function formatarPreco(valor) {
   return Number(valor).toLocaleString("pt-BR", {
     minimumFractionDigits: 2
   });
-}
-
-function converterDriveLink(url) {
-  if (!url) return "";
-
-  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-
-  if (match) {
-    /*return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1200`;*/
-    return `https://drive.google.com/uc?export=view&id=${match[1]}`;
-  }
-
-  return url;
-}
-
-function converterDrivePreview(url) {
-  if (!url) return "#";
-
-  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-
-  if (match) {
-    return `https://drive.google.com/file/d/${match[1]}/preview`;    
-  }
-
-  return url;
 }
 
 function proximaPagina() {

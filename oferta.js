@@ -1,5 +1,8 @@
 const form = document.getElementById("leadForm");
 
+// URL base da API em produção (ajuste o path conforme a rota real do endpoint de lead)
+const API_BASE_URL = "https://api.tiagomendessilva.com.br";
+
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
   const button = e.target.querySelector("button");
@@ -19,7 +22,7 @@ form.addEventListener("submit", async function(e) {
   const dataSave = {...data};
 
   try {
-    const response = await fetch("http://localhost:8080/lead", {
+    const response = await fetch(`${API_BASE_URL}/lead`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

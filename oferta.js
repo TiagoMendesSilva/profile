@@ -14,7 +14,7 @@ form.addEventListener("submit", async function(e) {
   const data = {
     nome: document.getElementById("nome").value,
     whatsapp: document.getElementById("whatsapp").value,
-    tipoImovel: document.getElementById("finalidade").value,
+    finalidade: document.getElementById("finalidade").value,
     tipologia: document.getElementById("tipologia").value,
     regiao: document.getElementById('regiao').value,
     faixaPreco: document.getElementById("faixaPreco").value
@@ -45,7 +45,7 @@ form.addEventListener("submit", async function(e) {
     /*Restaura os dados no formulário*/
     document.getElementById("nome").value = dataSave.nome;
     document.getElementById("whatsapp").value = dataSave.whatsapp;
-    document.getElementById("finalidade").value = dataSave.tipoImovel;
+    document.getElementById("finalidade").value = dataSave.finalidade;
     document.getElementById("tipologia").value = dataSave.tipologia;
     document.getElementById("faixaPreco").value = dataSave.faixaPreco;
     document.getElementById("regiao").value = dataSave.regiao;

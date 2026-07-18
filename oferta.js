@@ -14,8 +14,9 @@ form.addEventListener("submit", async function(e) {
   const data = {
     nome: document.getElementById("nome").value,
     whatsapp: document.getElementById("whatsapp").value,
-    tipoImovel: document.getElementById("tipoImovel").value,
+    tipoImovel: document.getElementById("finalidade").value,
     tipologia: document.getElementById("tipologia").value,
+    regiao: document.getElementById('regiao').value,
     faixaPreco: document.getElementById("faixaPreco").value
   };
 

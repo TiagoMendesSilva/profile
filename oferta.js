@@ -45,9 +45,10 @@ form.addEventListener("submit", async function(e) {
     /*Restaura os dados no formulário*/
     document.getElementById("nome").value = dataSave.nome;
     document.getElementById("whatsapp").value = dataSave.whatsapp;
-    document.getElementById("tipoImovel").value = dataSave.tipoImovel;
+    document.getElementById("finalidade").value = dataSave.tipoImovel;
     document.getElementById("tipologia").value = dataSave.tipologia;
     document.getElementById("faixaPreco").value = dataSave.faixaPreco;
+    document.getElementById("regiao").value = dataSave.regiao;
   } finally {
     /*Sempre restaura o botão */
     button.innerText = "📋 Receber Ofertas Exclusivas";
